@@ -31,7 +31,7 @@ document.getElementById('rsvpForm').addEventListener('submit', function(e) {
     const guests = document.getElementById('guests').value;
     const message = document.getElementById('message').value;
   
-    fetch('https://script.google.com/macros/s/AKfycbxFBRZgFfwkm-YXscPa0EPx1h6sA5QtZ4hsd1NsoTpFgwqQjJ4LfWZ6UkVsX06-k2vR/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbytmhAerLK6b6hS1EEij0ZxVNcZtWvz6GZm-urtUcZTu0D0a-xO0CogRqevfHFmpN2h/exec', {
         method: 'POST',
         body: JSON.stringify({ name, attendance, guests, message }),
         headers: { 'Content-Type': 'application/json' },
