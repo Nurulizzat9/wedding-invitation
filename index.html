@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H&H e-Wedding</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Elegant Font Example -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet" />
+
+    <style>
+    body {
+        font-family: 'Playfair Display', serif;
+    }
+
+    .font-script {
+        font-family: 'Great Vibes', cursive;
+    }
+    </style>
+</head>
+<body class="bg-blue-50 text-gray-800">
+    <!-- Landing Section -->
+    <section class="min-h-screen flex flex-col items-center justify-center text-center p-6 relative">
+        <!-- Background floral + butterflies (optional later) -->
+        <div class="absolute inset-0 bg-no-repeat bg-cover opacity-10 pointer-events-none" style="background-image: url('assets/floral-bg.jpg');"></div>
+
+        <h1 class="text-5xl md:text-6xl font-script text-dusty-blue mb-4 z-10">
+            Hayati & Hasyiemi
+        </h1>
+        <p class="text-lg md:text-xl mb-6 z-10">September 27, 2025</p>
+
+        <img
+            src="assets/pre-wedding.jpeg"
+            alt="Aisyah and Hafiz"
+            class="w-64 md:w-96 rounded-2xl shadow-lg mb-8 z-10"
+        />
+
+        <!-- Countdown placeholder -->
+        <div id="countdown" class="text-xl font-semibold z-10"></div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" class="bg-white py-12 px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6 text-dusty-blue font-script">Wedding Venue</h2>
+        <div class="max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-lg">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.6491758712486!2d101.86073807484063!3d2.916871554536862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdce4a537f8559%3A0x407a49af7d2d360b!2sDEWAN%20SRI%20CEMPAKA%20%26%20SEMARAK%20KASIH!5e0!3m2!1sen!2smy!4v1748840521169!5m2!1sen!2smy" 
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                class="w-full h-72">
+            </iframe>
+        </div>
+    </section>
+  
+    <!-- Schedule Section -->
+    <section id="schedule" class="bg-blue-100 py-12 px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6 text-dusty-blue font-script">Event Schedule</h2>
+        <div class="max-w-md mx-auto space-y-4 text-left">
+        <div class="flex justify-between bg-white p-4 rounded-xl shadow">
+            <span class="font-bold text-blue-800">3:00 PM</span>
+            <span class="italic">Ceremony at the Chapel</span>
+        </div>
+        <div class="flex justify-between bg-white p-4 rounded-xl shadow">
+            <span class="font-bold text-blue-800">4:30 PM</span>
+            <span class="italic">Photos & Greetings</span>
+        </div>
+        <div class="flex justify-between bg-white p-4 rounded-xl shadow">
+            <span class="font-bold text-blue-800">6:00 PM</span>
+            <span class="italic">Reception & Dinner</span>
+        </div>
+        <div class="flex justify-between bg-white p-4 rounded-xl shadow">
+            <span class="font-bold text-blue-800">8:00 PM</span>
+            <span class="italic">Dance & Celebration</span>
+        </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="bg-white py-12 px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6 text-dusty-blue font-script">RSVP</h2>
+        <p class="mb-8 text-gray-600">We would be delighted by your presence. Kindly let us know by filling the form below.</p>
+    
+        <form id="rsvpForm" class="max-w-md mx-auto space-y-4 text-left bg-blue-50 p-6 rounded-2xl shadow-lg">
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1" for="name">Name</label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300">
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1" for="attendance">Will you attend?</label>
+            <select id="attendance" name="attendance" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300">
+            <option value="">Select an option</option>
+            <option value="yes">Yes, I will attend</option>
+            <option value="no">Sorry, I can't make it</option>
+            </select>
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1" for="guests">Number of Guests</label>
+            <input type="number" id="guests" name="guests" min="1" max="10" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300">
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1" for="message">Message (optional)</label>
+            <textarea id="message" name="message" rows="3" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Submit RSVP</button>
+        </form>
+    
+        <div id="rsvpConfirmation" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+            <div class="bg-white rounded-2xl shadow-xl p-6 max-w-sm w-full text-center">
+                <h3 class="text-2xl font-script text-green-600 mb-2">Thank You!</h3>
+                <p class="text-gray-700 mb-4">Your RSVP has been submitted successfully. We can't wait to see you!</p>
+                <button onclick="closeModal()" class="mt-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
+                Close
+                </button>
+            </div>
+        </div>
+    </section>
+  
+    <script src="script.js"></script>
+</body>
+</html>
